@@ -2,7 +2,8 @@ import 'package:adivinaapp/widgets/boxcontainer.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+//  final Level _level;
+//   FlipCardGane(this._level);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -44,3 +45,4 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
