@@ -106,7 +106,7 @@ class _flipcardgameState extends State<flipcardgame> {
                     borderRadius: BorderRadius.circular(24),
                   ),
                   child: Text(
-                    "Replay",
+                    "Repetir",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
