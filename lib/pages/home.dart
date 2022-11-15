@@ -19,35 +19,66 @@ class _HomePageState extends State<HomePage> {
       body: ListView.builder(
           itemCount: _lista.length,
           itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Stack(
-                children: [
-                  Boxcontainer(
-                    color: Color.fromARGB(255, 33, 150, 243),
-                    height: 115,
-                    borderRadius: 30,
-                    borderR: true,
-                    spreadRadius: 0.5,
-                    x: 3,
-                    y: 4,
-                  ),
-                  Boxcontainer(
-                    color: Color.fromARGB(255, 99, 175, 238),
-                    height: 100,
-                    borderRadius: 30,
-                    borderR: true,
-                    spreadRadius: 4,
-                    x: 5,
-                    y: 3,
-                  ),
-                ],
+            
+            return GestureDetector(
+               onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => _lista[index].goto,
+                    ));
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Stack(
+                  children: [
+                    Boxcontainer(
+                      color: _lista[index].secomdarycolor,
+                      height: 115,
+                      borderRadius: 30,
+                      borderR: true,
+                      spreadRadius: 0.5,
+                      x: 3,
+                      y: 4,
+                      nombre: "",
+                    ),
+                   
+                    Container(
+                      child: Boxcontainer(
+                        color: _lista[index].primarycolor,
+                        height: 100,
+                        borderRadius: 30,
+                        borderR: true,
+                        spreadRadius: 4,
+                        x: 5,
+                        y: 3,
+                        nombre: _lista[index].nombre,
+                        children: getStar(_lista[index].noOfstar) ,
+                      ),
+                    ),
+
+                    
+                  ],
+                ),
               ),
             );
           }),
     );
   }
+  List<Widget> getStar(int no) {
+    List<Widget> _icons = [];
+    for (int i = 0; i < no; i++) {
+      _icons.insert(
+          i,
+          Icon(
+            Icons.star,
+            color: Colors.yellow,
+          ));
+    }
+    return _icons;
+  }
 }
+
 
 
 class Detalle {
