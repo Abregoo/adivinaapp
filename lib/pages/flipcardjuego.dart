@@ -1,7 +1,9 @@
+import 'package:adivinaapp/pages/datos.dart';
 import 'package:flutter/material.dart';
 
 class flipcardgame extends StatefulWidget {
-  const flipcardgame({super.key});
+  final Nivel nivel;
+  flipcardgame({super.key, required this.nivel});
 
   @override
   State<flipcardgame> createState() => _flipcardgameState();

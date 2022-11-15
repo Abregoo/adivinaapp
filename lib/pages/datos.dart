@@ -49,10 +49,8 @@ List getImgArray(
   return nivelTipoLst;
 }
 
-
-
 List<bool> getLstStadoInicial(Nivel nivel) {
-  List<bool> lstStadoInicial = [];	
+  List<bool> lstStadoInicial = [];
   if (nivel == Nivel.Dificil) {
     for (int i = 0; i < 18; i++) {
       lstStadoInicial.add(true);
@@ -70,8 +68,8 @@ List<bool> getLstStadoInicial(Nivel nivel) {
 }
 
 List<GlobalKey<FlipCardState>> getCardStateKeys(Nivel nivel) {
-  List<GlobalKey<FlipCardState>> cardStateKeys = [];		
-  
+  List<GlobalKey<FlipCardState>> cardStateKeys = [];
+
   if (nivel == Nivel.Dificil) {
     for (int i = 0; i < 18; i++) {
       cardStateKeys.add(GlobalKey<FlipCardState>());
