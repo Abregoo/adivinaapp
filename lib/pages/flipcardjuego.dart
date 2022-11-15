@@ -129,7 +129,7 @@ class _flipcardgameState extends State<flipcardgame> {
                               style: Theme.of(context).textTheme.headline3,
                             )
                           : Text(
-                              'Left:$izquierda',
+                              'Te faltan:$izquierda',
                               style: Theme.of(context).textTheme.headline3,
                             ),
                     ),
