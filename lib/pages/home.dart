@@ -2,6 +2,8 @@ import 'package:adivinaapp/pages/flipcardjuego.dart';
 import 'package:adivinaapp/widgets/boxcontainer.dart';
 import 'package:flutter/material.dart';
 
+import 'datos.dart';
+
 class HomePage extends StatefulWidget {
 //  final Level _level;
 //   FlipCardGane(this._level);
@@ -15,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
-          itemCount: 3,
+          itemCount: _lista.length,
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.all(8.0),
