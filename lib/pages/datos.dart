@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flip_card/flip_card.dart';
 
 enum Nivel { Dificil, Medio, Facil }
 
@@ -68,21 +69,21 @@ List<bool> getLstStadoInicial(Nivel nivel) {
   return lstStadoInicial;
 }
 
-// List<GlobalKey<FlipCardState>> getCardStateKeys(Nivel nivel) {
-//   List<GlobalKey<FlipCardState>> cardStateKeys = new List<GlobalKey<FlipCardState>>();	
+List<GlobalKey<FlipCardState>> getCardStateKeys(Nivel nivel) {
+  List<GlobalKey<FlipCardState>> cardStateKeys = [];		
   
-//   if (nivel == Nivel.Dificil) {
-//     for (int i = 0; i < 18; i++) {
-//       cardStateKeys.add(GlobalKey<FlipCardState>());
-//     }
-//   } else if (nivel == Nivel.Medio) {
-//     for (int i = 0; i < 12; i++) {
-//       cardStateKeys.add(GlobalKey<FlipCardState>());
-//     }
-//   } else if (nivel == Nivel.Facil) {
-//     for (int i = 0; i < 6; i++) {
-//       cardStateKeys.add(GlobalKey<FlipCardState>());
-//     }
-//   }
-//   return cardStateKeys;
-// }
+  if (nivel == Nivel.Dificil) {
+    for (int i = 0; i < 18; i++) {
+      cardStateKeys.add(GlobalKey<FlipCardState>());
+    }
+  } else if (nivel == Nivel.Medio) {
+    for (int i = 0; i < 12; i++) {
+      cardStateKeys.add(GlobalKey<FlipCardState>());
+    }
+  } else if (nivel == Nivel.Facil) {
+    for (int i = 0; i < 6; i++) {
+      cardStateKeys.add(GlobalKey<FlipCardState>());
+    }
+  }
+  return cardStateKeys;
+}
