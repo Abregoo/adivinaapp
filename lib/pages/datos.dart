@@ -26,10 +26,10 @@ List<String> imgArray() {
   ];
 }
 
-List getImgArray(
+List<String> getImgArray(
   Nivel nivel,
 ) {
-  List<String> nivelTipoLst = [];
+  List<String> nivelTipoLst = <String>[];
   List sourceArray = imgArray();
   if (nivel == Nivel.Dificil) {
     sourceArray.forEach((element) {
@@ -50,7 +50,7 @@ List getImgArray(
 }
 
 List<bool> getLstStadoInicial(Nivel nivel) {
-  List<bool> lstStadoInicial = [];
+  List<bool> lstStadoInicial = <bool>[];
   if (nivel == Nivel.Dificil) {
     for (int i = 0; i < 18; i++) {
       lstStadoInicial.add(true);
@@ -68,7 +68,7 @@ List<bool> getLstStadoInicial(Nivel nivel) {
 }
 
 List<GlobalKey<FlipCardState>> getCardStateKeys(Nivel nivel) {
-  List<GlobalKey<FlipCardState>> cardStateKeys = [];
+  List<GlobalKey<FlipCardState>> cardStateKeys = <GlobalKey<FlipCardState>>[];
 
   if (nivel == Nivel.Dificil) {
     for (int i = 0; i < 18; i++) {
