@@ -176,14 +176,12 @@ class _flipcardgameState extends State<flipcardgame> {
                                       } else {
                                         cardFlips[indexAnterior] = false;
                                         cardFlips[index] = false;
-                                        print(cardFlips);
 
                                         setState(() {
                                           izquierda -= 1;
                                         });
                                         if (cardFlips
                                             .every((t) => t == false)) {
-                                          print("Won");
                                           Future.delayed(
                                               const Duration(milliseconds: 160),
                                               () {
